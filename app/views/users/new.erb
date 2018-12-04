@@ -1,4 +1,15 @@
 <h1>New User</h1>
+
+<div class="error_messages">
+  <% if flash[:errors] %>
+    <ul><% flash[:errors].each do |error|%>
+      <li><%= error %></li>
+    <% end %></ul>
+  <% end %>
+</div>
+
+
+
 <%= form_for @user do |f| %>
   <p>Name: <%= f.text_field :name %></p>
   <p>Birth Month & Day (MMDD): <%= f.text_field :birthday %></p>
