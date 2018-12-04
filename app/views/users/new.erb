@@ -1,7 +1,7 @@
 <h1>New User</h1>
 <%= form_for @user do |f| %>
   <p>Name: <%= f.text_field :name %></p>
-  <p>Birth Month & Day: <%= f.text_field :birthday %></p>
-  <p>Birth Year: <%= f.text_field :birth_year %></p>
+  <p>Birth Month & Day (MMDD): <%= f.text_field :birthday %></p>
+  <p>Birth Year (YYYY): <%= f.text_field :birth_year %></p>
   <%= f.submit %>
 <% end %>
