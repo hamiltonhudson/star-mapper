@@ -1,1 +1,7 @@
-<h1>See all Zodiac Signs</h1>
+<h1>Zodiac Signs</h1>
+
+<div class="index">
+<% @zodiacs.each do |zodiac| %>
+  <%= link_to zodiac.sign, zodiac_path(zodiac) %>
+<% end %>
+</div>
