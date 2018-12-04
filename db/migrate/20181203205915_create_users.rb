@@ -4,8 +4,8 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :name
       t.integer :birthday
       t.integer :birth_year
-      t.references :zodiac_id, foreign_key: true
-      t.references :location_id, foreign_key: true
+      t.references :zodiac, foreign_key: true
+      t.references :location, foreign_key: true
 
       t.timestamps
     end
