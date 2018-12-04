@@ -1,4 +1,4 @@
-<h1>New User</h1>
+<h1>Edit a User</h1>
 
 <% if flash[:errors]  %>
   <div class="error_message">
@@ -15,5 +15,4 @@
   <p>Birth Month & Day (MMDD): <%= f.text_field :birthday %></p>
   <p>Birth Year (YYYY): <%= f.text_field :birth_year %></p>
   <%= f.submit %>
-
 <% end %>

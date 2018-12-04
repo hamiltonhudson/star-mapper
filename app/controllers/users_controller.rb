@@ -31,6 +31,19 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+
+  end
+
+  def update
+    if @user.update(user_params)
+      redirect_to users_path
+    else
+      flash[:errors] = @user.errors.full_messages
+      redirect_to edit_user_path
+    end
+  end
+
 
   private
 
@@ -38,4 +51,4 @@ class UsersController < ApplicationController
     params.require(:user).permit(:name, :birthday, :birth_year, :zodiac_id, :location_id)
   end
 
-end
+end #class UsersController
