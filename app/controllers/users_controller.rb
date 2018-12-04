@@ -4,15 +4,6 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  def find_zodiac_for_user(birthday)
-    case @user.birthday
-    when (0320..0420)
-      "Aries"
-    else
-      "not working"
-    end
-  end
-
   def show
     @user = User.find(params[:id])
   end
@@ -23,6 +14,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(user_params)
+    byebug
     if @user.valid?
       redirect_to users_path
     else
