@@ -1,4 +1,4 @@
-<h1>New User</h1>
+<h1>Edit a User</h1>
 
 <% if flash[:errors]  %>
   <div class="error_message">
@@ -15,10 +15,9 @@
   <%= f.text_field :name %></p>
   <label for="birthday">Birtday(MMDD): </label>
   <%= f.text_field :birthday %></p>
-  <%= f.label "Birthyear(YYYY)"  %>
+  <%= f.label "Birthyear(YYYY)" %>
   <%= f.text_field :birth_year %></p>
   <%= f.collection_select :location_id, @locations, :id, :name, prompt: true %>
 
   <%= f.submit %>
-
 <% end %>

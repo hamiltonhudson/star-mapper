@@ -5,3 +5,48 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Location.destroy_all
+Zodiac.destroy_all
+User.destroy_all
+
+locations = [
+  {name: "Queens"},
+  {name: "Bronx"},
+  {name: "Brooklyn"},
+  {name: "Staten Island"},
+  {name: "Manhattan"},
+]
+
+locations.each {|location| Location.create(location)}
+
+zodiacs = [
+{sign: "Aries", start_date: 321, end_date: 419},
+{sign: "Taurus", start_date: 420, end_date: 520},
+{sign: "Gemini", start_date: 521, end_date: 0620},
+{sign: "Cancer", start_date: 621, end_date: 0722},
+{sign: "Leo", start_date: 723, end_date: 822},
+{sign: "Virgo", start_date: 823, end_date: 922},
+{sign: "Libra", start_date: 923, end_date: 1022},
+{sign: "Scorpio", start_date: 1023, end_date: 1121},
+{sign: "Sagittarius", start_date: 1122, end_date: 1221},
+{sign: "Capricorn", start_date: 1222, end_date: 119},
+{sign: "Aquarius", start_date: 120, end_date: 218},
+{sign: "Pisces", start_date: 219, end_date: 320},
+]
+
+zodiacs.each {|zodiac| Zodiac.create(zodiac)}
+
+users = [
+{name: "Esther", birthday: 1215, birth_year: 1985},
+{name: "Tina", birthday: 1215, birth_year: 1985},
+{name: "Gene", birthday: 1215, birth_year: 1985},
+{name: "Louise", birthday: 1215, birth_year: 1985},
+{name: "Linda", birthday: 1215, birth_year: 1985},
+{name: "Bob", birthday: 1215, birth_year: 1985},
+{name: "Harry", birthday: 1215, birth_year: 1985},
+]
+
+users = users.map {|user| user.merge ( { location_id: Location.all.sample.id,  zodiac_id: Zodiac.all.sample.id } ) }
+
+users.each { |user| User.create(user) }

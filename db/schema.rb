@@ -26,8 +26,6 @@ ActiveRecord::Schema.define(version: 2018_12_03_205915) do
     t.integer "location_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["location_id"], name: "index_users_on_location_id"
-    t.index ["zodiac_id"], name: "index_users_on_zodiac_id"
   end
 
   create_table "zodiacs", force: :cascade do |t|
