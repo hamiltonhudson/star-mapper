@@ -11,8 +11,13 @@
 <% end %>
 
 <%= form_for @user do |f| %>
-  <p>Name: <%= f.text_field :name %></p>
-  <p>Birth Month & Day (MMDD): <%= f.text_field :birthday %></p>
-  <p>Birth Year (YYYY): <%= f.text_field :birth_year %></p>
+  <%= f.label :name %>
+  <%= f.text_field :name %></p>
+  <label for="birthday">Birtday(MMDD): </label>
+  <%= f.text_field :birthday %></p>
+  <%= f.label "Birthyear(YYYY)" %>
+  <%= f.text_field :birth_year %></p>
+  <%= f.collection_select :location_id, @locations, :id, :name, prompt: true %>
+
   <%= f.submit %>
 <% end %>
