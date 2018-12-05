@@ -19,5 +19,9 @@
   <%= f.text_field :birth_year %></p>
   <%= f.collection_select :location_id, @locations, :id, :name, prompt: true %>
 
-  <%= f.submit %>
+  <%= f.submit %><br><br>
+
+
 <% end %>
+
+<%= button_to "Delete User", @user, method: :delete, data: { confirm: "Are you sure?", disable_with: 'loading...'} %>
