@@ -20,7 +20,8 @@ ActiveRecord::Schema.define(version: 2018_12_03_205915) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
-    t.integer "birthday"
+    t.string "birth_month"
+    t.string "birth_day"
     t.integer "birth_year"
     t.integer "zodiac_id"
     t.integer "location_id"

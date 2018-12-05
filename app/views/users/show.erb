@@ -2,4 +2,7 @@
 
 <p>Name: <%= @user.name %></p>
 <p>Birthday: <%= @user.birthday %> </p>
-<p>Zodiac Sign: <%= @user.zodiac.sign%> </p> 
+<p>Zodiac Sign: <%= link_to @user.zodiac.sign, zodiac_path(@user.zodiac)%> </p>
+<p>Location: <%= link_to @user.location.name, location_path(@user.location)%> </p>
+
+<p><%= link_to "Edit this User", edit_user_path(@user)%></p>
