@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 # def get_zodiacs_name(sign)
 Zodiac.destroy_all
+Location.destroy_all
+User.destroy_all
 
 all_zodiacs = RestClient.get('https://zodiacal.herokuapp.com/api')
 zodiacs_array = JSON.parse(all_zodiacs)
@@ -21,19 +23,17 @@ end
 
 # end
 
-Location.destroy_all
-User.destroy_all
-#
-# locations = [
-#   {name: "Queens"},
-#   {name: "Bronx"},
-#   {name: "Brooklyn"},
-#   {name: "Staten Island"},
-#   {name: "Manhattan"},
-# ]
-#
-# locations.each {|location| Location.create(location)}
-#
+
+locations = [
+  {name: "Queens"},
+  {name: "Bronx"},
+  {name: "Brooklyn"},
+  {name: "Staten Island"},
+  {name: "Manhattan"},
+]
+
+locations.each {|location| Location.create(location)}
+
 # zodiacs = [
 # {sign: "Aries", start_date: 321, end_date: 419},
 # {sign: "Taurus", start_date: 420, end_date: 520},

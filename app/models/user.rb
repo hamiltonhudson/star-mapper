@@ -8,11 +8,27 @@ class User < ApplicationRecord
   # before_validation :find_zodiac_for_user
 
   def combine_bday
-    bday = "#{self.birth_month}” + ” ” + “#{self.birth_day}"
+    bday = "#{self.birth_month} #{self.birth_day}"
     #bday = "March" + " " + "15" => "March 15"
+
     Chronic.parse(bday)
     #Chronic.parse("March 15") => 2019-03-15 12:00:00 -0400
   end
+
+  def find_zodiac_for_user
+    user_bday = combine_bday
+    #user_bday = 2019-03-15 12:00:00 -0400
+    Zodiac.all.each do |zodiac|
+      start_date = Chronic.parse(zodiac.start_date)
+      end_date = Chronic.parse(zodiac.end_date)
+
+      if user_bday.between?(start_date, end_date)
+
+        self.zodiac = zodiac
+      end
+    end
+  end #def find_zodiac_for_user
+
 
 
   # require 'date'

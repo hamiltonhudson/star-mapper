@@ -14,8 +14,10 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(user_params)
-    if @user.valid?
+    @user = User.new(user_params)
+    @user.find_zodiac_for_user
+    @user.save
+    if @user.id
       redirect_to user_path(@user)
     else
       flash[:errors] = @user.errors.full_messages

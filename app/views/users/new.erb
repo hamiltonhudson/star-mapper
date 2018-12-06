@@ -18,7 +18,7 @@
   <%= f.label :birth_day %>
   <%= f.text_field :birth_day %></p>
   <%= f.label "Birthyear(YYYY)"  %>
-  <%= f.text_field :birth_year %></p>
+  <%= f.number_field :birth_year %></p>
   <%= f.collection_select :location_id, @locations, :id, :name, prompt: true %>
 
   <%= f.submit %><br><br>
