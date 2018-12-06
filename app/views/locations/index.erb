@@ -1,6 +1,7 @@
 <h1>See all Locations</h1>
 
-<% @locations.each do |location| %>
-  <%= link_to location.name, location_path(location) %><br><br>
-
-<% end %>
+  <div class="index">
+    <% @locations.each do |location| %>
+      <%= link_to location.name, location_path(location) %><br><br>
+    <% end %>
+  </div>

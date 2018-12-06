@@ -16,6 +16,7 @@ class UsersController < ApplicationController
   def create
     @user = User.create(user_params)
     if @user.valid?
+      # byebug
       redirect_to users_path
     else
       flash[:errors] = @user.errors.full_messages
@@ -47,7 +48,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :birthday, :birth_year, :zodiac_id, :location_id)
+    params.require(:user).permit(:name, :birth_month, :birth_day, :birth_year, :zodiac_id, :location_id)
   end
 
 end #class UsersController

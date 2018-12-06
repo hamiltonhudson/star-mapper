@@ -21,8 +21,8 @@ end
 
 # end
 
-# Location.destroy_all
-# User.destroy_all
+Location.destroy_all
+User.destroy_all
 #
 # locations = [
 #   {name: "Queens"},
