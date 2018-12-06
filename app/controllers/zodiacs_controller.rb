@@ -4,20 +4,20 @@ class ZodiacsController < ApplicationController
     @zodiacs = Zodiac.all
   end
 
-  def show
-    @zodiac = Zodiac.find(params[:id])
+  # def show
+  #   @zodiac = Zodiac.find(params[:id])
+  # end
+
+  def zodiac_users(which_zodiac)
+    User.all.select do |user|
+      user.zodiac == which_zodiac
+    end
   end
 
-  # def my_users(which_zodiac)
-  #   User.all.select do |user|
-  #     user.zodiac == which_zodiac
-  #   end
-  # end
-  #
-  # def show
-  #   find_zodiac
-  #   @sorted_users = my_users(@zodiac)
-  # end
+  def show
+    @zodiac = Zodiac.find(params[:id])
+    @user_results = zodiac_users(@zodiac)
+  end
 
 private
   def zodiac_params
