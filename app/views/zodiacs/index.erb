@@ -1,9 +1,22 @@
-<h1>Zodiac Signs</h1>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="bg-img">
 
-<div class="index">
-  <ul>
-    <% @zodiacs.each do |zodiac| %>
-      <li><%= link_to zodiac.sign, zodiac_path(zodiac) %></li>
-    <% end %>
-  </ul>
-</div>
+    </div>
+    <div class='header'>
+      <h1 id="main-page-title">Zodiac Signs</h1>
+    </div>
+    <div class="index">
+      <ul>
+        <% @zodiacs.each do |zodiac| %>
+          <li><%= link_to zodiac.sign, zodiac_path(zodiac) %></li>
+        <% end %>
+      </ul>
+    </div>
+  </body>
+</html>
