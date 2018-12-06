@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+ .star-padding {
+   padding-top: 5vh;
+ }
+
+ #main-page {
+  background-image: url('https://assets.rbl.ms/13464323/980x.jpg');
+  background-size: cover;
+  height: 100vh;
+ }
