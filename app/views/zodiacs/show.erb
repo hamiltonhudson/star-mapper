@@ -12,7 +12,7 @@
 
 <p>Other <%=@zodiac.sign%></p>
 <ul>
-  <% @users.each do |user| %>
+  <% @zodiac.users.each do |user| %>
     <li><%= link_to user.name, user_path(user) %></li>
   <% end %>
 </ul>
