@@ -1,13 +1,11 @@
 <h1><%= @location.name %></h1>
 
-<p>
+<p>All Users from <%= @location.name %>: </p>
   <ul>
-    All Users from <%= @location.name %>: <br>
-      <% @location.users.each do |user| %>
-        <li><%= link_to user.name, user_path(user) %></li>
-      <% end %>
+    <% @location.users.each do |user| %>
+      <li><%= link_to user.name, user_path(user) %> -- <%= user.zodiac.sign %></li>
+    <% end %>
   </ul>
-
 </p>
 
 <!-- link_to user.name, user_path(@location.user) -->

@@ -51,16 +51,25 @@ locations.each {|location| Location.create(location)}
 #
 # zodiacs.each {|zodiac| Zodiac.create(zodiac)}
 #
-# users = [
+users = [
+{name: "Esther", birth_month: "January", birth_day: 12, birth_year: 1985},
+{name: "Tina", birth_month: "February", birth_day: 11, birth_year: 1965},
+{name: "Gene", birth_month: "June", birth_day: 10, birth_year: 1945},
+{name: "Louise", birth_month: "June", birth_day: 11, birth_year: 1995},
+{name: "Jan", birth_month: "June", birth_day: 22, birth_year: 1980},
+
+# {name: "Linda", birthday: 1215, birth_year: 1985},
+# {name: "Bob", birthday: 1215, birth_year: 1985},
+# {name: "Harry", birthday: 1215, birth_year: 1985},
 # {name: "Esther", birthday: 1215, birth_year: 1985},
 # {name: "Tina", birthday: 1215, birth_year: 1985},
 # {name: "Gene", birthday: 1215, birth_year: 1985},
 # {name: "Louise", birthday: 1215, birth_year: 1985},
 # {name: "Linda", birthday: 1215, birth_year: 1985},
 # {name: "Bob", birthday: 1215, birth_year: 1985},
-# {name: "Harry", birthday: 1215, birth_year: 1985},
-# ]
-#
-# users = users.map {|user| user.merge ( { location_id: Location.all.sample.id,  zodiac_id: Zodiac.all.sample.id } ) }
-#
-# users.each { |user| User.create(user) }
+# {name: "Harry", birthday: 1215, birth_year: 1985}
+]
+
+users = users.map {|user| user.merge ( { location_id: Location.all.sample.id,  zodiac_id: Zodiac.all.sample.id } ) }
+
+users.each { |user| User.create(user) }

@@ -3,3 +3,8 @@
 <% @users.each do |user| %>
   <%= link_to user.name, user_path(user) %>
 <% end %>
+
+<%= form_tag(users_path, method: :get) do %>
+  <p> Search By Zodiac <%= text_field_tag(:search, params[:search]) %></p>
+  <%= submit_tag 'Search', name: nil %>
+<% end %>

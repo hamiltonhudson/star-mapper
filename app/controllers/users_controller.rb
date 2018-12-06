@@ -1,7 +1,12 @@
 class UsersController < ApplicationController
+  before_action :alls, only: [:show, :new, :create, :edit, :update]
 
   def index
-    @users = User.all
+    if params[:search]
+      @users = User.search(params[:search])
+    else
+      @users = User.all
+    end
   end
 
   def show
@@ -38,7 +43,7 @@ class UsersController < ApplicationController
       flash[:errors] = @user.errors.full_messages
       redirect_to edit_user_path
     end
-  end #def update
+  end
 
   def destroy
     @user = User.find(params[:id])
@@ -49,7 +54,14 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :birth_month, :birth_day, :birth_year, :zodiac_id, :location_id)
+    params.require(:user).permit(:name, :birth_month, :birth_day,
+      :birth_year, :zodiac_id, :location_id, :search)
   end
 
-end #class UsersController
+  def alls
+    @zodiacs = Zodiac.all
+    @locations = Location.all
+    @users = User.all
+  end
+
+end
