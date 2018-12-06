@@ -30,7 +30,7 @@ gem 'rest-client'
 gem 'chronic'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
-
+gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

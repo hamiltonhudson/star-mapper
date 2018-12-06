@@ -1,54 +1,54 @@
+<form class="ui form">
 <%= form_for @user do |f| %>
-
-<div class='field'>
-  <div class='label'>
-    <%= f.label :name %>
-  </div>
+  <div class='field'>
+    <%= f.label :name%>
   <div class='control'>
     <%= f.text_field :name %>
   </div>
-</div>
-
-<div class="field">
-  <div class="label">
-    <%= f.label "Birth Month" %>
   </div>
-  <div class="select">
-    <%= f.select :birth_month, options_for_select([["January"], ["February"], ["March"], ["April"], ["May"], ["June"], ["July"], ["August"], ["September"], ["October"], ["November"], ["December"]]), prompt: true %> </p>
-  </div>
-</div>
-
-<div class='field'>
-  <div class='label'>
-    <%= f.label :birth_day %>
-  </div>
-  <div class='control'>
-
-    <%= f.text_field :birth_day %>
-  </div>
-</div>
-
-<div class='field'>
-  <div class='label'>
-    <%= f.label "Birthyear(YYYY)"  %>
-  </div>
-  <div class="control">
-      <%= f.number_field :birth_year %>
-  </div>
-</div>
 
 
-<div class='field'>
-  <div class="label">
-    <%= f.label "Borough" %>
+
+      <%= f.label "Birth Month" %>
+
+    <div class="ui dropdown">
+      <%= f.select :birth_month, options_for_select([["January"], ["February"], ["March"], ["April"], ["May"], ["June"], ["July"], ["August"], ["September"], ["October"], ["November"], ["December"]]), prompt: true %>
+    </div>
+
+
+  <div class='field'>
+
+      <%= f.label :birth_day %>
+    <div class='control'>
+
+      <%= f.text_field :birth_day %>
+    </div>
   </div>
-  <div class="control">
-    <div class="select">
-      <%= f.collection_select :location_id, @locations, :id, :name, prompt: true %>
+
+  <div class='field'>
+
+      <%= f.label "Birthyear(YYYY)"  %>
+
+    <div class="control">
+        <%= f.number_field :birth_year %>
     </div>
   </div>
 
 
-  <%= f.submit %><br><br>
+  <div class='field'>
 
-<% end %>
+      <%= f.label "Borough" %>
+
+    <div class="control">
+      <div class="ui search dropdown">
+        <%= f.collection_select :location_id, @locations, :id, :name, prompt: true %>
+      </div>
+    </div>
+
+
+    <%= f.submit %><br><br>
+
+  <% end %>
+
+
+</form>

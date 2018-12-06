@@ -1,4 +1,4 @@
-<h1>See all Users</h1>
+<div class="ui huge header">See all Users</div>
   <ul>
     <% @users.each do |user| %>
       <li><%= link_to user.name, user_path(user) %></li>
