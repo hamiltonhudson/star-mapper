@@ -1,7 +1,7 @@
 <h1>Show User</h1>
 
 <p>Name: <%= @user.name %></p>
-<p>Birthday: <%= @user.birthday %> </p>
+<p>Birthday: <%= @user.combine_bday %> </p>
 <p>Zodiac Sign: <%= link_to @user.zodiac.sign, zodiac_path(@user.zodiac)%> </p>
 <p>Location: <%= link_to @user.location.name, location_path(@user.location)%> </p>
 

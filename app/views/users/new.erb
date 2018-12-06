@@ -13,14 +13,14 @@
 <%= form_for @user do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %></p>
-  <label for="birthday">Birtday(MMDD): </label>
-  <%= f.text_field :birthday %></p>
+
+  <%= f.select :birth_month, options_for_select([["January"], ["February"], ["March"], ["April"], ["May"], ["June"], ["July"], ["August"], ["September"], ["October"], ["November"], ["December"]]) %> </p>
+  <%= f.label :birth_day %>
+  <%= f.text_field :birth_day %></p>
   <%= f.label "Birthyear(YYYY)"  %>
   <%= f.text_field :birth_year %></p>
   <%= f.collection_select :location_id, @locations, :id, :name, prompt: true %>
 
   <%= f.submit %><br><br>
-
-  <%= button_to('Delete User', user_path(@user),method: :delete, data: { confirm: 'Are you sure?', disable_with: 'loading...' } %>
 
 <% end %>
