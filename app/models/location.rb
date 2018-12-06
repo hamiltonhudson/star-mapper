@@ -35,9 +35,9 @@ class Location < ApplicationRecord
   #
   # end
   #
-  def least_popular_by_sign
-    self.zodiacs.sort_by {|zodiac| zodiac.users.count.last}
-  end
+  # def least_popular_by_sign
+  #   self.zodiacs.sort_by {|zodiac| zodiac.users.count.last}
+  # end
 
   #for user find favorite/most popular location for other
   #users of that users_by_sign
