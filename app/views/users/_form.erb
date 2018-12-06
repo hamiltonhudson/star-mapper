@@ -23,17 +23,31 @@
     <%= f.label :birth_day %>
   </div>
   <div class='control'>
+
     <%= f.text_field :birth_day %>
   </div>
 </div>
 
 <div class='field'>
-  <%= f.label "Birthyear(YYYY)"  %>
-  <%= f.number_field :birth_year %></p>
+  <div class='label'>
+    <%= f.label "Birthyear(YYYY)"  %>
+  </div>
+  <div class="control">
+      <%= f.number_field :birth_year %>
+  </div>
+</div>
+
 
 <div class='field'>
-  <%= f.label "Borough" %>
-  <%= f.collection_select :location_id, @locations, :id, :name, prompt: true %>
+  <div class="label">
+    <%= f.label "Borough" %>
+  </div>
+  <div class="control">
+    <div class="select">
+      <%= f.collection_select :location_id, @locations, :id, :name, prompt: true %>
+    </div>
+  </div>
+
 
   <%= f.submit %><br><br>
 
