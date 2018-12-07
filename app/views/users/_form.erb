@@ -1,21 +1,26 @@
+ <div class="error_message">
+   <ul><% if flash[:errors]  %>
+   <% flash[:errors].each do |error| %>
+     <li><%= error %></li>
+   <% end %>
+   </ul>
+ </div>
+<% end %>
+
 <%= form_for @user do |f| %>
 
 <div class='field'>
-  <div class='label'>
-    <%= f.label :name %>
-  </div>
-  <div class='control'>
-    <%= f.text_field :name %>
-  </div>
+    <%= f.label :name, class: "label" %>
+    <%= f.text_field :name, class: "control" %>
 </div>
 
 <div class="field">
-  <div class="label">
-    <%= f.label "Birth Month" %>
-  </div>
-  <div class="select">
-    <%= f.select :birth_month, options_for_select([["January"], ["February"], ["March"], ["April"], ["May"], ["June"], ["July"], ["August"], ["September"], ["October"], ["November"], ["December"]]), prompt: true %> </p>
-  </div>
+
+    <%= f.label "Birth Month", class: "label" %>
+
+
+    <%= f.select :birth_month, options_for_select([["January"], ["February"], ["March"], ["April"], ["May"], ["June"], ["July"], ["August"], ["September"], ["October"], ["November"], ["December"]]), prompt: true, class: "select" %>
+
 </div>
 
 <div class='field'>
@@ -33,8 +38,11 @@
 
 <div class='field'>
   <%= f.label "Borough" %>
-  <%= f.collection_select :location_id, @locations, :id, :name, prompt: true %>
+  <%= f.collection_select :location_id, @locations, :id, :name, prompt: true, class: "select" %>
+</div>
+<div class="field">
+    <%= f.submit%><br><br>
+</div>
 
-  <%= f.submit %><br><br>
 
 <% end %>

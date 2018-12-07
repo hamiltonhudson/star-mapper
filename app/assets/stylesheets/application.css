@@ -14,12 +14,28 @@
  *= require_self
  */
 
+
+h1 {
+  color: white
+}
+
  .star-padding {
    padding-top: 5vh;
+   background: #d2bcab
  }
+
+
+
 
  #main-page {
   background-image: url('https://assets.rbl.ms/13464323/980x.jpg');
   background-size: cover;
   height: 100vh;
+
+ }
+
+ #sepia {
+   background-image: url('https://uc25cc768c80a1db10c918e296d8.previews.dropboxusercontent.com/p/thumb/AAQFxyOl7uSN_Cv8CZUz9K0SD3bdCp-T5DbagfWeEyKj69YpzVdV1YLxQrTzJCeD--LZj3UXa1Pb5DkHBBD9Tfvke4LsCcvA9Npt8KMAlaW5vv3uwvmIOTWICWhf0q11tSsx-pFA-B5LKqjubCRd0Uz_-qYk0XhbUPasXh3Ni98NUI2bN8-cnew3svIuDWaADSkAqBBAelfSEFdS5oWhkB9BD9Whub7hzutzlnBLGLlK1Q/p.jpeg?size=2048x1536&size_mode=3');
+   background-size: cover;
+     height: 100vh;
  }
