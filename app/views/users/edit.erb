@@ -1,13 +1,16 @@
-<div class="star-padding container">
-
-<h1 class="title is-1">Edit a User</h1>
-
-<%= render "form"%>
-
-
-<%= button_to "Delete User", @user, method: :delete, data: { confirm: "Are you sure?", disable_with: 'loading...'}, class: "button"%>
-
-</div>
+<!-- <div class="star-padding container"> -->
+<nav class="level">
+</nav>
 
 <body id='sepia'>
 </body>
+
+<div class="container">
+  <div class="notification" style="background-color: #ffffff; opacity: 0.7; filter: alpha(opacity=60);">
+      <h1 class="title is-1">Edit a User</h1>
+
+        <%= render "form"%>
+
+        <%= button_to "Delete User", @user, method: :delete, data: { confirm: "Are you sure?", disable_with: 'loading...'}, class: "button"%>
+  </div>
+</div>

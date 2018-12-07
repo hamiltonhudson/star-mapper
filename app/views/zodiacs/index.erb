@@ -1,18 +1,18 @@
-<body>
-<div class="star-padding container">
-
-
-  <h1 class="title is-1">Zodiac Signs</h1>
-
-  <div class="index">
-    <ul>
-      <% @zodiacs.each do |zodiac| %>
-        <li><%= link_to zodiac.sign, zodiac_path(zodiac) %></li>
-      <% end %>
-    </ul>
-  </div>
-</body
-
+<!-- <body> -->
+<!-- <div class="star-padding container"> -->
+<nav class="level">
+</nav>
 
 <body id='sepia'>
 </body>
+
+<div class="container">
+  <div class="notification" style="background-color: #ffffff; opacity: 0.7; filter: alpha(opacity=60);">
+  <h1 class="title is-1">Zodiac Signs</h1>
+    <ul>
+      <% @zodiacs.each do |zodiac| %>
+        <li class ="is-size-4"><%= link_to zodiac.sign, zodiac_path(zodiac) %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
