@@ -1,34 +1,21 @@
-<<<<<<< HEAD
-<div class='background-zod'>
-    <h1>Zodiac Signs</h1>
-    <body id='zodiac-page'>
-    </body>
-    <div class="index">
-      <ul>
-        <% @zodiacs.each do |zodiac| %>
-          <li class="is-white"><%= link_to zodiac.sign, zodiac_path(zodiac) %></li>
-        <% end %>
-      </ul>
 
-    </div>
-    </div>
-=======
-<body>
+<div class='background-zod'>
+
+<!-- <body id='zodiac-page'> -->
+
 <div class="star-padding container">
 
 
   <h1 class="title is-1">Zodiac Signs</h1>
-
+<body id='sepia'>
   <div class="index">
     <ul>
       <% @zodiacs.each do |zodiac| %>
-        <li><%= link_to zodiac.sign, zodiac_path(zodiac) %></li>
+        <li class ="lists"><%= link_to zodiac.sign, zodiac_path(zodiac) %></li>
       <% end %>
     </ul>
   </div>
-</body
 
+<!-- </body -->
 
-<body id='sepia'>
 </body>
->>>>>>> 1ef8186ed3d26321fd0f739b59f2d799e3ad25a0

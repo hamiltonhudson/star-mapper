@@ -3,10 +3,10 @@
 <h1 class="title is-1">See all Users</h1>
 
 <body id='sepia'>
-</body>
+
   <ul>
     <% @users.each do |user| %>
-      <li><%= link_to user.name, user_path(user) %></li>
+      <li class="lists"><%= link_to user.name, user_path(user) %></li>
       <% end %>
     </ul>
 
@@ -15,5 +15,5 @@
   <%= submit_tag 'Search', name: nil %>
 <% end %>
 
-<body id='sepia'>
+
 </body>

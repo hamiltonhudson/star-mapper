@@ -3,13 +3,16 @@
 
 <h1 class="title is-1">See all Locations</h1>
 <body id='sepia'>
-</body>
-  <div id="background">
 
-  </div>
+  <!-- <div id="background">
+
+  </div> -->
 
   <div class="index">
+    <ul>
     <% @locations.each do |location| %>
-      <%= link_to location.name, location_path(location) %><br><br>
+      <li class="lists"><%= link_to location.name, location_path(location) %></li>
     <% end %>
+    </ul>
   </div>
+</body>
