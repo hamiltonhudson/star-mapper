@@ -1,4 +1,6 @@
-<h1><%= @user.name %></h1>
+<div class="star-padding container">
+
+<h1 class="title is-1"><%= @user.name %></h1>
 
 <p>Birthday: <%= @user.combine_bday %> </p>
 <p>Zodiac Sign: <%= link_to @user.zodiac.sign, zodiac_path(@user.zodiac)%> </p>
@@ -6,3 +8,6 @@
 
 <p><%= button_to "Edit User", edit_user_path(@user)%></p>
 <p<%= button_to "Remove", user_path(@user), method: :delete %></p>
+
+<body id='sepia'>
+</body>

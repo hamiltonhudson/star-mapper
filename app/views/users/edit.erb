@@ -1,5 +1,13 @@
-<h1>Edit a User</h1>
+<div class="star-padding container">
+
+<h1 class="title is-1">Edit a User</h1>
 
 <%= render "form"%>
 
-<%= button_to "Delete User", @user, method: :delete, data: { confirm: "Are you sure?", disable_with: 'loading...'} %>
+
+<%= button_to "Delete User", @user, method: :delete, data: { confirm: "Are you sure?", disable_with: 'loading...'}, class: "button"%>
+
+</div>
+
+<body id='sepia'>
+</body>

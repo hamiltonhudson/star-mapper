@@ -1,4 +1,6 @@
-<h1><%=@zodiac.sign%></h1>
+<div class="star-padding container">
+
+<h1 class="title is-1"><%=@zodiac.sign%></h1>
 <p>Start Date: <%= @zodiac.start_date %> —— End Date: <%= @zodiac.end_date %></p>
 <p>Defining Characteristics: <%= @zodiac.keywords %></p>
 <div>---------------</div>
@@ -19,3 +21,6 @@
 
 <div>---------------</div>
 <p><%=link_to "Return to all Zodiacs", zodiacs_path %></p>
+
+<body id='sepia'>
+</body>
