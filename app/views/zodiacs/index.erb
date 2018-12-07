@@ -1,13 +1,13 @@
 <div class='background-zod'>
     <h1>Zodiac Signs</h1>
+    <body id='zodiac-page'>
+    </body>
     <div class="index">
       <ul>
         <% @zodiacs.each do |zodiac| %>
-          <li><%= link_to zodiac.sign, zodiac_path(zodiac) %></li>
+          <li class="is-white"><%= link_to zodiac.sign, zodiac_path(zodiac) %></li>
         <% end %>
       </ul>
-
-      <button type="button" class="btn btn-primary">Primary</button>
 
     </div>
     </div>
