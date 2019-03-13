@@ -1,26 +1,68 @@
-<h1>New User</h1>
+<!-- <div class="star-padding container"> -->
 
-<% if flash[:errors]  %>
-  <div class="error_message">
-    <ul>
-    <% flash[:errors].each do |error| %>
-      <li><%= error %></li>
-    <% end %>
-    </ul>
+<nav class="level">
+</nav>
+
+<body id='sepia'>
+</body>
+
+<div class="container">
+  <div class="notification" style="background-color: #ffffff; opacity: 0.7; filter: alpha(opacity=60);">
+    <h1 class="title is-1">New User</h1>
+      <%= render "form"%>
   </div>
-<% end %>
+</div>
 
-<%= form_for @user do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %></p>
+<!-- # <% if flash[:errors]  %>
+#   <div class="error_message">
+#     <ul>
+#     <% flash[:errors].each do |error| %>
+#       <li><%= error %></li>
+#     <% end %>
+#     </ul>
+#   </div>
+# <% end %>
+#
+#
+# <%= form_for @user do |f| %>
+#
+# <div class='field'>
+#   <div class='label'>
+#     <%= f.label :name %>
+#   </div>
+#   <div class='control'>
+#     <%= f.text_field :name %>
+#   </div>
+# </div>
+#
+# <div class="field">
+#   <div class="label">
+#     <%= f.label "Birth Month" %>
+#   </div>
+#   <div class="select">
+#     <%= f.select :birth_month, options_for_select([["January"], ["February"], ["March"], ["April"], ["May"], ["June"], ["July"], ["August"], ["September"], ["October"], ["November"], ["December"]]), prompt: true %> </p>
+#   </div>
+# </div>
+#
+# <div class='field'>
+#   <div class='label'>
+#     <%= f.label :birth_day %>
+#   </div>
+#   <div class='control'>
+#     <%= f.text_field :birth_day %>
+#   </div>
+# </div>
+#
+# <div class='field'>
+#   <%= f.label "Birthyear(YYYY)"  %>
+#   <%= f.number_field :birth_year %></p>
+#
+# <div class='field'>
+#   <%= f.label "Borough" %>
+#   <%= f.collection_select :location_id, @locations, :id, :name, prompt: true %>
+#
+#   <%= f.submit %><br><br>
+#
+# <% end %> -->
 
-  <%= f.select :birth_month, options_for_select([["January"], ["February"], ["March"], ["April"], ["May"], ["June"], ["July"], ["August"], ["September"], ["October"], ["November"], ["December"]]) %> </p>
-  <%= f.label :birth_day %>
-  <%= f.text_field :birth_day %></p>
-  <%= f.label "Birthyear(YYYY)"  %>
-  <%= f.number_field :birth_year %></p>
-  <%= f.collection_select :location_id, @locations, :id, :name, prompt: true %>
-
-  <%= f.submit %><br><br>
-
-<% end %>
+</div>

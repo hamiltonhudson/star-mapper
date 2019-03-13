@@ -1,8 +1,20 @@
-<h1><%= @user.name %></h1>
+<!-- <div class="star-padding container"> -->
+<nav class="level">
+</nav>
 
-<p>Birthday: <%= @user.combine_bday %> </p>
-<p>Zodiac Sign: <%= link_to @user.zodiac.sign, zodiac_path(@user.zodiac)%> </p>
-<p>Location: <%= link_to @user.location.name, location_path(@user.location)%> </p><br>
+<body id='sepia'>
+</body>
 
-<p><%= button_to "Edit User", edit_user_path(@user)%></p>
-<p<%= button_to "Remove", user_path(@user), method: :delete %></p>
+
+<div class="container">
+  <div class="notification" style="background-color: #ffffff; opacity: 0.7; filter: alpha(opacity=60);">
+    <h1 class="title is-1"><%= @user.name %></h1>
+
+    <p class="title is-4">Birthday: <%= @user.combine_bday %> </p>
+    <p class="title is-4">Zodiac Sign: <%= link_to @user.zodiac.sign, zodiac_path(@user.zodiac)%> </p>
+    <p class="title is-4">Location: <%= link_to @user.location.name, location_path(@user.location)%> </p><br>
+
+    <p class="title is-4"><%= button_to "Edit User", edit_user_path(@user)%></p>
+    <p class="title is-4"><%= button_to "Remove", user_path(@user), method: :delete %></p>
+  </div>
+</div>

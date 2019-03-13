@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  before_action :alls, only: [:show, :new, :create, :edit, :update]
 
   def index
     if params[:search]
@@ -56,12 +55,6 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :birth_month, :birth_day,
       :birth_year, :zodiac_id, :location_id, :search)
-  end
-
-  def alls
-    @zodiacs = Zodiac.all
-    @locations = Location.all
-    @users = User.all
   end
 
 end

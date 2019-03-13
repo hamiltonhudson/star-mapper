@@ -1,27 +1,16 @@
-<h1>Edit a User</h1>
+<!-- <div class="star-padding container"> -->
+<nav class="level">
+</nav>
 
-<% if flash[:errors]  %>
-  <div class="error_message">
-    <ul>
-    <% flash[:errors].each do |error| %>
-      <li><%= error %></li>
-    <% end %>
-    </ul>
+<body id='sepia'>
+</body>
+
+<div class="container">
+  <div class="notification" style="background-color: #ffffff; opacity: 0.7; filter: alpha(opacity=60);">
+      <h1 class="title is-1">Edit a User</h1>
+
+        <%= render "form"%>
+
+        <%= button_to "Delete User", @user, method: :delete, data: { confirm: "Are you sure?", disable_with: 'loading...'}, class: "button"%>
   </div>
-<% end %>
-
-<%= form_for @user do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %></p>
-  <label for="birthday">Birtday(MMDD): </label>
-  <%= f.text_field :birthday %></p>
-  <%= f.label "Birthyear(YYYY)" %>
-  <%= f.text_field :birth_year %></p>
-  <%= f.collection_select :location_id, @locations, :id, :name, prompt: true %>
-
-  <%= f.submit %><br><br>
-
-
-<% end %>
-
-<%= button_to "Delete User", @user, method: :delete, data: { confirm: "Are you sure?", disable_with: 'loading...'} %>
+</div>

@@ -1,11 +1,27 @@
-<h1><%= @location.name %></h1>
+<!-- <div class="star-padding container"> -->
+  <nav class="level">
+  </nav>
 
+  <body id='sepia'>
+  </body>
+
+
+<!--
 <p>All Users from <%= @location.name %>: </p>
   <ul>
     <% @location.users.each do |user| %>
       <li><%= link_to user.name, user_path(user) %> -- <%= user.zodiac.sign %></li>
     <% end %>
   </ul>
-</p>
+</p> -->
 
 <!-- link_to user.name, user_path(@location.user) -->
+
+<div class="container">
+  <div class="notification" style="background-color: #ffffff; opacity: 0.7; filter: alpha(opacity=60);">
+    <h1 class="title is-1"><%= @location.name %></h1>
+    <% @location.users.each do |user| %>
+      <li class="title is-4"><%= link_to user.name, user_path(user) %> -- <%= user.zodiac.sign %></li>
+    <% end %>
+  </div>
+</div>
