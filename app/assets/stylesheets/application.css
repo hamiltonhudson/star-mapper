@@ -16,7 +16,7 @@
 
 
 h1 {
-  color: white
+  color: white;
 }
 
 .star-padding {
@@ -25,13 +25,33 @@ h1 {
  }
 
 
+#home-title {
+  /* font-family: "BigBlueRough", sans-serif;  */
+  /* font: "Times New Roman", sans-serif; */
+  opacity: 0.7;
+  color: orange;
+  filter: alpha(opacity=60);"
+}
+ @font-face { font-family: 'Big Blue Rough'; src: url('./Big-Blue-Rough.otf'); }
+@font-face { font-family: 'Big Blue Rough'; font-weight: bold; src: url('./Big-Blue-Rough.otf');}
 
 
  #main-page {
-  background-image: url('https://assets.rbl.ms/13464323/980x.jpg');
+  /* background-image: url('https://assets.rbl.ms/13464323/980x.jpg'); */
+  background-image: url('./pics/sepia_globe4.jpeg');
   background-size: cover;
   height: 100vh;
+ }
 
+ .header {
+   font-family: 'Permanent Marker', cursive;
+   font-size: 50px;
+   padding-left: 2.5em;
+   padding-top: 3.5em;
+ }
+
+ .header:hover {
+   color: blue
  }
 
    #sepia {
