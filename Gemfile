@@ -34,6 +34,9 @@ gem 'chronic'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem "railties", ">= 5.2.2.1"
+gem "actionview", ">= 5.2.2.1"
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
